@@ -1,10 +1,10 @@
 import pandas as pd
 
 rating_col = ['user_id', 'movie_id', 'rating']
-ratings = pd.read_csv(r'''H:\Python\Data Science\ml-100k\u.data''', sep='\t', names=rating_col, usecols=range(3), encoding="ISO-8859-1")
+ratings = pd.read_csv(r'''ml-100k\u.data''', sep='\t', names=rating_col, usecols=range(3), encoding="ISO-8859-1")
 
 movie_col = ['movie_id', 'title']
-movies = pd.read_csv(r'''H:\Python\Data Science\ml-100k\u.item''', sep='|', names=movie_col, usecols=range(2), encoding="ISO-8859-1")
+movies = pd.read_csv(r'''ml-100k\u.item''', sep='|', names=movie_col, usecols=range(2), encoding="ISO-8859-1")
 
 ratings = pd.merge(movies, ratings)
 
