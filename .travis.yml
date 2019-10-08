@@ -9,8 +9,8 @@ before_install:
   - pip install -U pytest
   - pip install codecov
 install:
-  - pip install . # install package + test dependencies
+  - pip install -r requirements.txt
 script: pytest 
-  python movie-recommender.py # run tests
+  - python movie-recommender.py # run tests
 after_success:
   - codecov # submit coverage
