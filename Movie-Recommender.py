@@ -11,7 +11,7 @@ ratings = pd.merge(movies, ratings)
 print(ratings.head())
 
 userRatings = ratings.pivot_table(index=['user_id'],columns=['title'],values='rating')
-print(serRatings.head())
+print(userRatings.head())
 
 corrMatrix = userRatings.corr()
 print(corrMatrix.head())
