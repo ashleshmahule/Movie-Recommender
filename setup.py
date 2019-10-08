@@ -1,7 +1,11 @@
-import setuptools
-import versioneer
+from setuptools import setup
 
-INSTALL_REQUIRES = [
-    'numpy',
-    'scipy'
-]
+setup(
+   name='movie-recommender',
+   version='1.0',
+   description='Movie Recommender',
+   author='Ashlesh Mahule',
+   author_email='ashleshmahule15@gmail.com',
+   packages=['foo'],  #same as name
+   install_requires=['pandas'] #external packages as dependencies
+)
