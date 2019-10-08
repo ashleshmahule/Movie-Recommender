@@ -1,10 +1,15 @@
 language: python
 python:
-  - "3.6"
-  - "3.7"
-# command to install dependencies
+  - 2.7
+  - 3.5
+  - 3.6
+before_install:
+  - python --version
+  - pip install -U pip
+  - pip install -U pytest
+  - pip install codecov
 install:
-  - pip install .
-# command to run tests
-script:
- - pytest
+  - pip install ".[test]" . # install package + test dependencies
+script: pytest # run tests
+after_success:
+  - codecov # submit coverage
